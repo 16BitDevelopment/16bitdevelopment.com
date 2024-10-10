@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    --colour1: #fff;
+    --colour2: #989898;
+    --colour3: #303030;
+    --colour4: #212121;
+    --colour5: #000;
+
+    color: var(--colour1);
+
+    font-family: "t26-carbon", Arial;
+
+    box-sizing: border-box;
+}
+
+:root {
+    --scroll: 0;
+
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--colour5);
+
+    padding-top: calc(2.75rem + 30px);
+}

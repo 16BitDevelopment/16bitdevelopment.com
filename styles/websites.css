@@ -1,0 +1,299 @@
+body {
+    padding-top: 300vh;
+}
+
+main {
+    font-size: 1rem;
+}
+
+main .top-section {
+    position: fixed;
+    inset: 0 50% 0 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px;
+
+    --bg-opacity: calc(1 - ((max(var(--scroll), 125) - 125) / 100));
+
+    background-color: rgba(33, 33, 33, var(--bg-opacity));
+
+    pointer-events: none;
+}
+
+main .top-section .top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    text-shadow: 0 0 10px #ffffff40;
+
+    translate: 0 calc(-3% * (max(var(--scroll), 125) - 125) * 100 / 100);
+
+    background-image: radial-gradient(var(--colour3), transparent 80%);
+}
+
+main .top-section .top-text h1 {
+    font-size: 6em;
+
+    opacity: 0;
+    filter: blur(5px);
+
+    transition: 1s 0.25s;
+}
+
+main .top-section .top-text.show h1 {
+    opacity: 1;
+    filter: blur(0);
+}
+
+main .top-section .top-text p {
+    font-size: 1.5em;
+    max-width: 75%;
+
+    opacity: 0;
+    translate: 0 -50px;
+
+    transition: all 1s 0.5s;
+}
+
+main .top-section .top-text.show p {
+    opacity: 1;
+    translate: 0;
+}
+
+main .main-websites {
+    position: absolute;
+    inset: 0 0 -200% 50%;
+}
+
+main .main-websites .main-websites-text {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    filter: blur(calc(10px * var(--scroll) / 50));
+
+    background-image: radial-gradient(var(--colour4), transparent 80%);
+
+    opacity: 0;
+
+    transition: opacity 1s 0.75s;
+}
+
+main .main-websites .main-websites-text.show {
+    opacity: 1;
+}
+
+main .main-websites .main-websites-text h1 {
+    font-size: 2em;
+}
+
+main .main-websites .main-websites-text i {
+    font-size: 2em;
+
+    animation: arrow-down 2s infinite;
+}
+
+main .main-websites .website-container {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 100px;
+}
+
+main .main-websites .website-container .website {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    transition: all 0.25s;
+}
+
+main .main-websites .website-container .website:hover {
+    box-shadow: 3px 3px 20px #ffffff40,
+    -5px -5px 15px #00000040;
+}
+
+main .main-websites .website-container .website .black-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    background-color: #00000040;
+    text-decoration: none;
+
+    transition: all 0.25s;
+}
+
+main .main-websites .website-container .website:hover .black-overlay {
+    background-color: #00000080;
+}
+
+main .main-websites .website-container .website .black-overlay h1 {
+    font-size: 3em;
+    text-align: center;
+
+    translate: 0 25px;
+    opacity: 0;
+
+    transition: all 0.25s;
+}
+
+main .main-websites .website-container .website:hover .black-overlay h1 {
+    translate: 0;
+    opacity: 1;
+}
+
+main .main-websites .website-container .website iframe {
+    height: 100%;
+    width: 100%;
+
+    pointer-events: none;
+}
+
+main .main-websites .website-container:last-child {
+    opacity: calc(1 - (max(var(--scroll), 200) - 200) / 75);
+}
+
+main .other-websites {
+    margin: 200px 0;
+
+    columns: auto 300px;
+    column-gap: 1em;
+
+    padding: 25px;
+}
+
+main .other-websites .website {
+    width: 100%;
+    display: block;
+    margin-bottom: 1em;
+
+    position: relative;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    transition: all 0.25s;
+}
+
+main .other-websites .website:hover {
+    box-shadow: 3px 3px 20px #ffffff40,
+    -5px -5px 15px #00000040;
+}
+
+main .other-websites .website:hover .text-desc {
+    background-color: #00000080;
+}
+
+main .other-websites .website iframe {
+    width: 100%;
+    height: var(--height);
+
+    pointer-events: none;
+}
+
+main .other-websites .website .text-desc {
+    position: absolute;
+    inset: 0;
+
+    background-color: #00000040;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    transition: all 0.25s;
+}
+
+main .other-websites .website .text-desc h1 {
+    text-align: center;
+
+    opacity: 0;
+    translate: 0 25px;
+
+    transition: all 0.25s;
+}
+
+main .other-websites .website:hover .text-desc h1 {
+    opacity: 1;
+    translate: 0;
+}
+
+@keyframes arrow-down {
+    from,
+    to {
+        translate: 0;
+    }
+
+    50% {
+        translate: 0 -50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    main {
+        font-size: 0.75rem;
+    }
+
+    main .main-websites .website-container {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        padding-top: 325vh;
+    }
+
+    main .top-section {
+        inset: 0;
+
+        --bg-opacity: calc(1 - (var(--scroll) / 100));
+    }
+
+    main .top-section .top-text {
+        translate: 0 calc(-3% * var(--scroll) * 100 / 100);
+    }
+
+    main .main-websites {
+        inset: 0;
+        top: 125vh;
+    }
+
+    main .main-websites .main-websites-text {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        font-size: 0.5rem;
+    }
+
+    main .main-websites .website-container .website {
+        width: 100%;
+        height: unset;
+        aspect-ratio: 5/7;
+    }
+}

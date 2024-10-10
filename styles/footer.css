@@ -1,0 +1,35 @@
+footer {
+    padding: 50px 25px;
+
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 1rem;
+
+    background-image: radial-gradient(var(--colour4), transparent 80%);
+}
+
+footer .socials {
+    display: flex;
+    gap: 1em;
+}
+
+footer .socials i {
+    font-size: 1.75em;
+
+    transition: all 0.25s;
+}
+
+footer .socials i:hover {
+    scale: 1.1;
+}
+
+footer p {
+    font-size: 1.25em;
+}
+
+@media (max-width: 650px) {
+    footer {
+        font-size: 0.5rem;
+    }
+}

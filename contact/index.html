@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NVJCLJTLD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7NVJCLJTLD');
+        </script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://use.typekit.net/swu3nqq.css">
+
+        <script src="https://kit.fontawesome.com/9055024f82.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+            emailjs.init({
+            publicKey: "FX9tdwKvBGdLACrf3",
+            });
+            })();
+        </script>
+
+        <title>Contact</title>
+
+        <link rel="icon" type="image/x-icon" href="../images/logo-bg.png">
+
+        <link rel="stylesheet" href="../styles/general.css">
+        <link rel="stylesheet" href="../styles/nav.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/contact.css">
+
+        <script src="script.js" defer></script>
+        <script src="../script.js" defer></script>
+    </head>
+    <body>
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+        <nav>
+            <div class="gradient-background"></div>
+            <div class="pages">
+                <a class="logo" href="../">
+                    <img src="../images/logo.png" alt="Logo">
+                </a>
+                <div class="text-links">
+                    <label for="navbar-toggle" class="x-icon">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                    <a href="../">Home</a>
+                    <a href="../about">About</a>
+                    <a href="../websites">Websites</a>
+                    <a href="../contact" class="active">Contact</a>
+                </div>
+                <label for="navbar-toggle" class="hamburger-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+        </nav>
+
+        <main>
+            <div class="top-left-section">
+                <div class="mail-icon">
+                    <img src="../images/mail.svg" alt="Mail Icon">
+                </div>
+            </div>
+            <div class="top-section">
+                <h1>Contact</h1>
+                <p>Reach out to me with your expression of intrest.</p>
+                <div class="socials">
+                    <div class="fade left"></div>
+                    <a style="--num: 0;" href="https://www.facebook.com/profile.php?id=61559303773751" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a style="--num: 1;" href="https://www.instagram.com/16bitdevelopment/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a style="--num: 2;" href="https://x.com/16bitdevelopmen" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a style="--num: 3;" href="https://github.com/16BitDevelopment" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <div class="fade right"></div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="contact-container">
+                    <h1>Let's Get Started.</h1>
+                    <form id="form">
+                        <h2>What's Your Name? <span>*</span></h2>
+                        <div class="form-group">
+                            <input name="first-name" type="text" id="first-name" placeholder="First Name" required>
+                            <input name="last-name" type="text" id="last-name" placeholder="Last Name" required>
+                        </div>
+                        <h2>How Shall I Contact You? <span>*</span></h2>
+                        <div class="form-group">
+                            <input name="email" type="email" id="email" placeholder="Email" required>
+                            <input name="phone" type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <h2>About The Website <span>*</span></h2>
+                        <h3>Let me know what you're looking for.</h3>
+                        <div class="form-group">
+                            <textarea name="message" type="text" id="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="submit-group" id="submit-group">
+                            <input type="submit" class="submit">
+                            <div class="load-container">
+                                <p>Loading...</p>
+                                <div class="load-anim">
+                                    <div class="dot" style="--delay: 0s;"></div>
+                                    <div class="dot" style="--delay: -0.25s;"></div>
+                                    <div class="dot" style="--delay: -0.5s;"></div>
+                                </div>
+                            </div>
+                            <p class="sent-msg">Sent</p>
+                            <p class="error-msg">Error</p>
+                        </div>
+                    </form>
+                </div>
+
+                <footer>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/profile.php?id=61559303773751" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/16bitdevelopment/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/16bitdevelopmen" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://github.com/16BitDevelopment" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <p>&copy; 16 Bit Development 2024</p>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>

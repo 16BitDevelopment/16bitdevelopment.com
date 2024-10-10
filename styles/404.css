@@ -1,0 +1,30 @@
+main {
+    font-size: 1rem;
+}
+
+main .main-text {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 300px 150px;
+}
+
+main .main-text h1 {
+    font-size: 10em;
+
+    text-shadow: -1px -1px 10px #ffffff40;
+
+    translate: 0 calc(1% * var(--scroll) * 100 / 200);
+
+    filter: blur(calc(10px * ((max(var(--scroll), 10) - 10) / 90)));
+}
+
+main .main-text p {
+    font-size: 2em;
+
+    translate: 0 calc(1% * var(--scroll) * 100 / 175);
+
+    filter: blur(calc(10px * ((max(var(--scroll), 10) - 10) / 90)));
+}
