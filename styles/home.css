@@ -357,6 +357,5 @@ main .reviews-section .review-container .review .review-text a {
     main .reviews-section .review-container .review {
         max-width: 300px;
         aspect-ratio: unset;
-        overflow: hidden;
     }
 }
