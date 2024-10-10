@@ -84,6 +84,8 @@ main .top-section .socials {
     filter: blur(calc(var(--scroll) * 5px / 75));
 
     background-image: radial-gradient(var(--colour4), transparent 80%);
+
+    overflow: hidden;
 }
 
 main .top-section .socials .fade {
@@ -287,11 +289,12 @@ main .contact .contact-container form .submit-group.error .error-msg {
 @keyframes socials {
     from {
         left: 0;
+        translate: -100%;
     }
 
     to {
         left: 100%;
-        translate: -100%;
+        translate: 0;
     }
 }
 
