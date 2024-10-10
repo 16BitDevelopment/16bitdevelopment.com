@@ -16,14 +16,14 @@ main .basic-info {
     margin-top: 100px;
     margin-bottom: 500px;
 
-    opacity: calc(1 - ((max(var(--scroll), 25) - 25) / 75));
+    opacity: calc(1 - (var(--scroll) / 50));
     filter: blur(calc(10px * ((max(var(--scroll), 10) - 10) / 90)));
 }
 
 main .basic-info .bg-text {
     position: absolute;
     top: 50%;
-    translate: 0 calc(-1% * var(--scroll) * 100 / 75 - 50%);
+    translate: 0 calc(-0.5vh * var(--scroll) * 100 / 75 - 50%);
     width: 100%;
 
     display: flex;
@@ -325,6 +325,7 @@ main .reviews-section .review-container .review .review-text a {
     main .reviews-section {
         grid-template-columns: 1fr;
         margin-top: calc(100vh + 500px);
+        margin-bottom: 75vh;
     }
 
     main .reviews-section .review-container .review {
