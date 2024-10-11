@@ -232,7 +232,7 @@ main .reviews-section {
     row-gap: 75px;
 
     margin-top: calc(100vh + 500px);
-    margin-bottom: 150px;
+    margin-bottom: 50vh;
 }
 
 main .reviews-section .review-container {
@@ -254,8 +254,8 @@ main .reviews-section .review-container .review {
     background-color: var(--colour5);
     border-radius: 15px;
 
-    transform: rotateX(calc(90deg - 1deg * (max(var(--scroll), 125) - 125) * 90 / 75))
-    rotateY(calc(45deg - 1deg * (max(var(--scroll), 125) - 125) * 45 / 75));
+    transform: rotateX(calc((1 - min(1, max(0, var(--scroll) - 200))) * (90deg - 1deg * (max(var(--scroll), 125) - 125) * 90 / 75)))
+    rotateY(calc((1 - min(1, max(0, var(--scroll) - 200))) * (45deg - 1deg * (max(var(--scroll), 125) - 125) * 45 / 75)));
 
     transition: all 1s 0.5s, transform 0s;
 }
